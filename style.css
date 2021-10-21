@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+:root {
+  /* ### Primary */
+
+  --Very-Dark-Blue: hsl(243, 87%, 12%);
+  --Desaturated-Blue: hsl(238, 22%, 44%);
+
+  /* ### Accent */
+
+  --Bright-Blue: hsl(224, 93%, 58%);
+  --Moderate-Cyan: hsl(170, 45%, 43%);
+
+  /* ### Neutral */
+
+  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+
+  /* ## Typography */
+
+  /* ### Headings, Call-to-actions, Header Navigation */
+
+  --Open-sans: "Open Sans", sans-serif;
+
+  /* ### Body */
+
+  --Raleway: "Raleway", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+html {
+  height: 100%;
+}
+
+/* Body */
+
+body {
+  height: 100vh;
+}
+
+.page-container {
+  padding: 0 1.6rem;
+  position: relative;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  background: url(./images/bg-curve-mobile.svg);
+  background-position: top center;
+  background-size: cover;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nav */
+
+.nav-bar {
+  width: 100%;
+  font-family: var(--Raleway);
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  padding: 1rem 0;
+}
+
+.nav-bar__logo {
+  width: 55%;
+}
+
+.nav-bar__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  font-size: 0.75em;
+}
+/* MAIN */
+
+.content__box {
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.content__box-info-tittle {
+  font-family: var(--Raleway);
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 150%;
+  margin: 1rem auto;
+}
+
+.content__box-info-paragraph {
+  margin-bottom: 1.4rem;
+  font-family: var(--Open-sans);
+  font-size: 0.8em;
+}
+
+.form__box {
+  width: 100%;
+}
+
+.form__box-input,
+.form__box-btn {
+  width: 100%;
+}
+
+.form__box-input {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #000;
+  font-size: 0.8em;
+}
+
+.form__box-input::placeholder {
+  color: #aaa;
+}
+
+.box-img-svg {
+  width: 100%;
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
