@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 18px;
+  font-family: var(--Open-sans);
 }
 
 :root {
@@ -18,7 +19,7 @@
 
   /* ### Neutral */
 
-  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Grayish-Blue: #f6f6fe;
   --Light-Gray: hsl(0, 0%, 75%);
 
   /* ## Typography */
@@ -53,7 +54,6 @@ body {
 }
 
 .page-container {
-  padding: 0 1.6rem;
   position: relative;
 }
 
@@ -78,7 +78,7 @@ header {
   font-family: var(--Raleway);
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
-  padding: 1rem 0;
+  padding: 1rem 1.6rem;
 }
 
 .nav-bar__logo {
@@ -91,12 +91,15 @@ header {
   align-items: center;
 }
 
-.link {
+.nav-link {
   font-size: 0.75em;
+  color: #555;
 }
 /* MAIN */
 
 .content__box {
+  padding: 0 1.6rem;
+
   text-align: center;
   display: flex;
   flex-direction: column-reverse;
@@ -112,7 +115,6 @@ header {
 
 .content__box-info-paragraph {
   margin-bottom: 1.4rem;
-  font-family: var(--Open-sans);
   font-size: 0.8em;
 }
 
@@ -125,20 +127,21 @@ header {
 .form__box-btn {
   width: 100%;
   padding: 0.8em;
-  margin-bottom: 1em;
-  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.1rem;
   border: 0.1rem solid #000;
   font-size: 0.8em;
 }
 
 .form__box-input::placeholder {
-  color: #aaa;
+  color: #ccc;
 }
 
 .form__box-btn {
   background-color: var(--Bright-Blue);
+  font-family: var(--Raleway);
   color: #fff;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 700;
   border: none;
   box-shadow: 0 0.2rem 0.4rem #00000041;
@@ -159,31 +162,186 @@ header {
 /* Box 2 */
 
 .box-2 .content__box-info-tittle {
+  font-family: var(--Raleway);
   font-size: 0.9em;
 }
 
 .box-2 .content__box-info-paragraph {
-  font-size: 0.78em;
+  text-align: left;
+  font-size: 0.79em;
   color: #555;
 }
 
 .content__box-info-link {
+  width: fit-content;
   margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-bottom: 0.1em solid var(--Moderate-Cyan);
 }
 
 .info-link {
-  padding-bottom: 0.4rem;
+  display: block;
   color: var(--Moderate-Cyan);
-  border-bottom: 0.1em solid var(--Moderate-Cyan);
+  font-size: 0.75em;
+}
+
+.info-link-svg {
+  width: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.info-link,
+.info-link-svg {
+  padding-bottom: 0.4rem;
 }
 
 /* Box Card */
 
 .content__box-card {
-  box-shadow: 0 0 1rem #00000020;
+  box-shadow: 0 0 1rem #00000030;
+  padding: 1.6rem 2rem;
+  text-align: left;
+}
+
+.box-card-testimonial {
+  font-size: 0.7em;
+}
+
+.box-card-testimonial {
+  line-height: 170%;
+  margin: 0.8rem auto;
+  font-size: 0.65em;
+}
+
+.box-card-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.avatar {
+  width: 15%;
+  border-radius: 100%;
+}
+
+.profile {
+  margin-left: 0.4rem;
+}
+
+.profile-name {
+  font-size: 0.7em;
+}
+
+.profile-tittle {
+  font-size: 0.55em;
+}
+
+/* Box 3 */
+
+.box-3 {
+  background-color: var(--Desaturated-Blue);
+  margin-bottom: 0;
+  padding: 2.5rem 2rem;
+}
+
+.box-3 .content__box-info-tittle,
+.box-3 .content__box-info-paragraph {
+  color: #fff;
+}
+
+.box-3 .content__box-info-paragraph {
+  line-height: 150%;
+}
+
+.box-3 .form__box {
+  width: 90%;
+  margin: auto;
+}
+
+.box-3 .form__box-input {
+  border: none;
+}
+
+.box-3 .form__box-input::placeholder {
+  font-size: 0.8em;
+}
+
+.box-3 .form__box-btn {
+  font-size: 0.7em;
 }
 
 /* FOOTER */
+
+.foot__main {
+  padding: 2rem 2.5rem;
+  background-color: var(--Very-Dark-Blue);
+  color: #fff;
+}
+
+.foot-logo {
+  /* PENDIENTE COREEGIR EL COLOR */
+  width: 10rem;
+  filter: invert(99%) sepia(48%) saturate(2650%) hue-rotate(180deg)
+    brightness(111%) contrast(99%);
+}
+
+[class^="foot__main-"] {
+  margin: 2.5rem 0;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.icon {
+  margin-right: 1.2rem;
+}
+
+.list-links {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.foot-link {
+  font-size: 0.9em;
+  margin-bottom: 1rem;
+}
+
+/* Social */
+
+.social {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.social__btn {
+  width: 1.8rem;
+  margin: 0.3rem;
+  border: 0.1rem solid #c6ccd2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.social__btn-icon {
+  font-size: 0.8rem;
+}
+
+/* Base */
 .attribution {
   font-size: 11px;
   text-align: center;
