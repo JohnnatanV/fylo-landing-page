@@ -49,12 +49,16 @@
               family, and co-workers.
             </p>
             <form action="" class="form__box">
-              <input
-                type="email"
-                class="form__box-input"
-                placeholder="Enter your email..."
-              />
-              <button class="form__box-btn">Get Started</button>
+              <div class="box-input" data-error="Please check your email">
+                <input
+                  type="email"
+                  class="form__box-input"
+                  placeholder="Enter your email..."
+                />
+              </div>
+              <div class="box-btn">
+                <button type="submit" class="form__box-btn">Get Started</button>
+              </div>
             </form>
           </div>
           <div class="content__box-img">
@@ -81,7 +85,7 @@
             <div class="content__box-card">
               <div class="quote">
                 <img
-                  src="./images/icon-quotes.svg"
+                  src="./images/quote-left-solid.svg"
                   alt=""
                   class="box-card-quote"
                 />
@@ -117,13 +121,15 @@
               would be happy to help you.
             </p>
           </div>
-          <form action="" class="form__box">
+          <form action="" class="form__box" error="Please check your email">
             <input
               type="email"
               class="form__box-input"
               placeholder="email@example.com"
             />
-            <button class="form__box-btn">Get Started For Free</button>
+            <button type="submit" class="form__box-btn">
+              Get Started For Free
+            </button>
           </form>
         </div>
       </main>
