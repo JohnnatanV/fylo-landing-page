@@ -128,11 +128,15 @@ header {
   font-family: var(--Open-sans);
 }
 
+.box-input,
+.box-btn {
+  margin-bottom: 0.5rem;
+}
+
 .form__box-input,
 .form__box-btn {
   width: 100%;
   padding: 0.8rem;
-  margin-bottom: 0.5rem;
   border-radius: 0.1rem;
   outline: none;
   border: 0.1rem solid #777;
@@ -169,13 +173,26 @@ header {
 
 /* Input Error */
 
-.box-input[data-error] .form__box-input {
-  border-color: red;
+.form__box-input:invalid:not(:focus):not(:placeholder-shown) ~ .error {
+  max-height: 10rem;
+  padding: 0.4rem 0;
 }
 
-.box-input[data-error]::after {
-  display: block;
-  content: attr(data-error);
+.error {
+  margin: 0;
+  text-align: left;
+  color: #c73030;
+  max-height: 0;
+  transition: 0.28s;
+  overflow: hidden;
+}
+
+.error p {
+  font-size: 0.7em;
+}
+
+.box-3 .error {
+  color: var(--Light-Gray);
 }
 
 /* Boxes */
@@ -444,9 +461,16 @@ header {
 
   /* Form */
 
+  .box-input,
+  .box-btn {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .form__box-input,
   .form__box-btn {
-    width: 60%;
+    width: 100%;
     padding: 0.5rem;
   }
 
@@ -459,6 +483,12 @@ header {
 
   .box-3 {
     margin: 0;
+  }
+
+  /* Error */
+
+  .error p {
+    font-size: 0.85em;
   }
 }
 
@@ -509,7 +539,7 @@ header {
 
   .box-1 .form__box-btn {
     margin-left: 0.6rem;
-    width: 32%;
+    width: 60%;
   }
 
   .box-1 .form__box-input,
@@ -536,11 +566,11 @@ header {
   }
 
   .box-3 .form__box-input {
-    width: 70%;
+    width: 100%;
   }
 
   .box-3 .form__box-btn {
-    width: 35%;
+    width: 55%;
   }
 
   .box-3 .form__box-input,
@@ -617,7 +647,7 @@ header {
 
   .box-1 .form__box-btn {
     font-size: 0.55em;
-    width: 25%;
+    width: 45%;
   }
 
   .box-2 .content__box-info-tittle {
@@ -655,16 +685,26 @@ header {
   }
 
   .box-3 .form__box-input {
-    width: 60%;
+    width: 80%;
   }
 
   .box-3 .form__box-btn {
-    width: 20%;
+    width: 40%;
   }
 
   .box-3 .form__box-input,
   .box-3 .form__box-btn {
     margin-left: 2rem;
     padding: 0.4rem;
+  }
+
+  /* Error */
+
+  .box-3 .error {
+    margin-left: 2rem;
+  }
+
+  .error p {
+    font-size: 0.85em;
   }
 }

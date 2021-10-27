@@ -49,12 +49,15 @@
               family, and co-workers.
             </p>
             <form action="" class="form__box">
-              <div class="box-input" data-error="Please check your email">
+              <div class="box-input">
                 <input
                   type="email"
                   class="form__box-input"
                   placeholder="Enter your email..."
                 />
+                <div class="error">
+                  <p>Please check your email</p>
+                </div>
               </div>
               <div class="box-btn">
                 <button type="submit" class="form__box-btn">Get Started</button>
@@ -121,15 +124,22 @@
               would be happy to help you.
             </p>
           </div>
-          <form action="" class="form__box" error="Please check your email">
-            <input
-              type="email"
-              class="form__box-input"
-              placeholder="email@example.com"
-            />
-            <button type="submit" class="form__box-btn">
-              Get Started For Free
-            </button>
+          <form action="" class="form__box">
+            <div class="box-input">
+              <input
+                type="email"
+                class="form__box-input"
+                placeholder="Enter your email..."
+              />
+              <div class="error">
+                <p>Please check your email</p>
+              </div>
+            </div>
+            <div class="box-btn">
+              <button type="submit" class="form__box-btn">
+                Get Started for free
+              </button>
+            </div>
           </form>
         </div>
       </main>
